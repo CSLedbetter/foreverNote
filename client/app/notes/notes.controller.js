@@ -21,5 +21,13 @@
         });
     }
 
-  }
+    function postNote() {
+      notesFactory
+        .create(note)
+        .then(function () {
+
+        });
+    }
+
+  };
 })();

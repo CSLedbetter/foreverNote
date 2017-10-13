@@ -22,7 +22,7 @@ router.get('/:id', function (req, res) {
 
 //POST: /api/notes
 router.post('/', function (req, res) {
-  const note = db.Note.build(req, res);
+  const note = db.Note.build(req.body);
 
   note.save().then(function (newNote) {
     res.send(newNote);
