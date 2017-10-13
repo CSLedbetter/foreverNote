@@ -13,20 +13,74 @@
   <div class="container">
 
     <div class="jumbotron">
-      <h1>Note App</h1>
+      <h1>Forever Note</h1>
+      <h4>Write yourself notes that can be viewed FOREVER!</h4>
+    </div>
+
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Make a new note
+</button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">New Note</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="input-group">
+                  <label for="input">Note Title</label>
+                  <input type="text" class="form-control"></input>
+                </div>
+                <div class="input-group">
+                  <label>Note Category</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="col-md-12">
+        <div class="input-group">
+          <input type="text" class="form-control">
+          <span class="input-group-btn">
+        <button class="btn"> Post</button>
+        </span>
+        </div>
+      </div>
     </div>
 
 
 
-    <ul class="list-group">
-      <li class="list-group-item" ng-repeat="note in notescontroller">
-        <h1>{{note.title}}</h1>
-        <p><small>{{note.category}}</small></p>
-        <p>{{note.content}}</p>
-      </li>
-    </ul>
+    <hr>
+    <div class="row">
 
-<p>Hello there</p>
+      <ul class="list-group">
+        <li class="list-group-item" ng-repeat="note in notescontroller">
+          <h1>{{note.title}}</h1>
+          <p><small>{{note.category}}</small></p>
+          <p>{{note.content}}</p>
+        </li>
+      </ul>
+
+    </div>
+
+  Notes will go here
 
 
 

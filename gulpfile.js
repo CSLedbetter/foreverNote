@@ -14,6 +14,7 @@ gulp.task('copy:html', function() {
 
 gulp.task('build:js', function() {
   return gulp.src([
+      './node_modules/jquery/dist/jquery.js',
       './node_modules/angular/angular.js',
       './client/**/*.module.js',
       './client/**/*.js'
